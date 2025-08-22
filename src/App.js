@@ -7,25 +7,11 @@ const languages = ["JS", "Ruby"];
 
 const LanguageContext = createContext(null);
 
-// const LanguageProvider = ({children}) => {
-  
-//   const toggleLanguage = () => {
-//     console.log("toggle fuction hit")
-    
-//     return (
-//       <LanguageContext.Provider value={{language, toggleLanguage}}>
-//       {children}
-//       </LanguageContext.Provider>
-//     )
-//   }
-// }
-
 function App() {
   
   const [language, setLanguage] = useState("null");
   
   const toggle = () => {
-    console.log("toggle button pressed")
     setLanguage(
       (prevLang) => (prevLang === 'Java'? 'Ruby' : 'Java' )
     )
